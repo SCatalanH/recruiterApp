@@ -1,0 +1,7 @@
+{
+  "name": "recruiterApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
