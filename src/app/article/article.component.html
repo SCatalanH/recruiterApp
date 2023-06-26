@@ -1,7 +1,10 @@
-<ion-content class="ion-padding">
-  <h1>Click on the buttons to scroll the content.</h1>
-
-  <ion-button expand="block" (click)="scrollToBottom()">Scroll to Bottom</ion-button>
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Header </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <h1>Scroll the content and notice that the text goes behind the header and footer.</h1>
 
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed tellus nec mauris auctor dignissim fermentum in
@@ -48,6 +51,9 @@
     semper vel libero. Suspendisse tincidunt mollis condimentum. Nulla facilisi. Etiam neque nisl, egestas nec iaculis
     sed, tristique faucibus sem. Sed mollis dui quis ligula cursus rutrum.
   </p>
-
-  <ion-button expand="block" (click)="scrollToTop()">Scroll to Top</ion-button>
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title> Footer </ion-title>
+  </ion-toolbar>
+</ion-footer>
