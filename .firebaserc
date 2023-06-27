@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "recruiterapp-98dfa": {
+      "hosting": {
+        "app": [
+          "recruiterapp-98dfa"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "recruiterapp-98dfa"
+  }
+}
