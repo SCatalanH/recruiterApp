@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from 'recruiterApp/node_modules/@angular/forms';
-import { Router } from 'recruiterApp/node_modules/@angular/router';
-import { AlertController, LoadingController } from 'recruiterApp/node_modules/@ionic/angular';
+import { FormBuilder, Validators,FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AlertController, LoadingController } from '@ionic/angular';
 import { AuthService } from '../services/auth.service';
-import { FormGroup } from 'recruiterApp/node_modules/@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +10,7 @@ import { FormGroup } from 'recruiterApp/node_modules/@angular/forms';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  credentials: FormGroup;
+  credentials!: FormGroup;
 
   constructor(
     private fb: FormBuilder,

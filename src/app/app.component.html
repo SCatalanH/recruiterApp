@@ -6,7 +6,14 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
+         
           <ion-list-header>RecruiterApp</ion-list-header>
+          <ion-buttons slot="start">
+            <ion-button (click)="logout()">
+              <ion-icon slot="icon-only" name="log-out"></ion-icon>
+            </ion-button>
+
+          </ion-buttons>
           <ion-note>seb.catalan@duocuc.cl</ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
