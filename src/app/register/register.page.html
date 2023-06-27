@@ -1,33 +1,34 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Register</ion-title>
+    <ion-title>
+      Registro
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="background"></div>
-  <div class="content">
-    <form>
-      <ion-item lines="full">
-        <ion-label position="floating">Nombre</ion-label>
-        <ion-input type="text" required></ion-input>
-      </ion-item>
-      <ion-item lines="full">
-        <ion-label position="floating">Apellido</ion-label>
-        <ion-input type="text" required></ion-input>
-      </ion-item>
-      <ion-item lines="full">
-        <ion-label position="floating">Email</ion-label>
-        <ion-input type="text" required></ion-input>
-      </ion-item>
-      <ion-item lines="full">
-        <ion-label position="floating">Contraseña</ion-label>
-        <ion-input type="password" required></ion-input>
-      </ion-item>
-      <ion-button expand="full" class="login-button" href="#">Registrarse</ion-button>
-    </form>
+
+
+<ion-content class="ion-padding">
+
+  <div class="custom-center">
+    <h1 class="ion-text-center custom-margin-bottom">Registrate con nosotros</h1> 
+  <form [formGroup]="credentials" (ngSubmit)="login()">
+
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input type="email" placeholder= "Email" formControlName="email"></ion-input>
+      <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">Email is invalid</ion-note>
+    </ion-item>
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input type="password" placeholder= "Password" formControlName="password"></ion-input>
+      <ion-note slot="error" *ngIf="(password.dirty || password.touched) && email.errors">Password is invalid</ion-note>
+    </ion-item>
+
+    <ion-button expand="full" type="button" (click)="register()">Registrarse</ion-button>
+  </form>
+
+    <div class="register-hint">
+      <small>¿Ya tienes una cuenta? Logueate <a href="/login">aquí</a>!</small>
+    </div>
   </div>
+
 </ion-content>

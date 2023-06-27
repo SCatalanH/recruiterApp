@@ -25,3 +25,15 @@
     --background: black;
     --color: white;
   }
+
+  .custom-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Opcional: si quieres que el formulario esté centrado verticalmente en toda la pantalla */
+  }
+
+  .custom-margin-bottom {
+    margin-bottom: 60px; /* Ajusta el valor según la separación deseada */
+  }

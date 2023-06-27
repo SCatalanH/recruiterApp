@@ -8,7 +8,10 @@
 
 
 
+
 <ion-content class="ion-padding">
+  <div class="custom-center">
+    <h1 class="ion-text-center custom-margin-bottom">Ingresa tus datos</h1> <!-- Texto grande con margen inferior personalizado -->
   <form [formGroup]="credentials" (ngSubmit)="login()">
 
     <ion-item fill="solid" class="ion-margin-bottom">
@@ -21,14 +24,13 @@
     </ion-item>
 
     <ion-button expand="full" type="submit" [disabled]="!credentials.valid">Login</ion-button>
-    <ion-button expand="full" type="button" (click)="register()">Registrarse</ion-button>
+    
   </form>
-
     <div class="register-hint">
       <small>¿No tienes una cuenta? Regístrate <a href="/register">aquí</a>!</small>
     </div>
     <div class="forgot-password">
       <small>¿Olvidaste la contraseña? Recupera <a href="/forgot-password">aquí</a>!</small>
     </div>
-
+  </div> 
 </ion-content>
