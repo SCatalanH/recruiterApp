@@ -9,7 +9,8 @@
 
 
 <ion-content class="ion-padding">
-
+  <div class="background"></div>
+  <div class="content">
   <div class="custom-center">
     <h1 class="ion-text-center custom-margin-bottom">Registrate con nosotros</h1> 
   <form [formGroup]="credentials" (ngSubmit)="login()">
@@ -30,5 +31,6 @@
       <small>¿Ya tienes una cuenta? Logueate <a href="/login">aquí</a>!</small>
     </div>
   </div>
+</div>
 
 </ion-content>

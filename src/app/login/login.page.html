@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Login
+      Inicio de Sesión
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,20 +10,22 @@
 
 
 <ion-content class="ion-padding">
+  <div class="background"></div>
+  <div class="content">
   <div class="custom-center">
     <h1 class="ion-text-center custom-margin-bottom">Ingresa tus datos</h1> <!-- Texto grande con margen inferior personalizado -->
   <form [formGroup]="credentials" (ngSubmit)="login()">
 
     <ion-item fill="solid" class="ion-margin-bottom">
       <ion-input type="email" placeholder= "Email" formControlName="email"></ion-input>
-      <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">Email is invalid</ion-note>
+      <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">Email es invalido</ion-note>
     </ion-item>
     <ion-item fill="solid" class="ion-margin-bottom">
-      <ion-input type="password" placeholder= "Password" formControlName="password"></ion-input>
-      <ion-note slot="error" *ngIf="(password.dirty || password.touched) && email.errors">Password is invalid</ion-note>
+      <ion-input type="password" placeholder= "Contraseña" formControlName="password"></ion-input>
+      <ion-note slot="error" *ngIf="(password.dirty || password.touched) && email.errors">La contraseña es invalida</ion-note>
     </ion-item>
 
-    <ion-button expand="full" type="submit" [disabled]="!credentials.valid">Login</ion-button>
+    <ion-button expand="full" type="submit" [disabled]="!credentials.valid">Iniciar Sesión</ion-button>
     
   </form>
     <div class="register-hint">
@@ -32,5 +34,6 @@
     <div class="forgot-password">
       <small>¿Olvidaste la contraseña? Recupera <a href="/forgot-password">aquí</a>!</small>
     </div>
+  </div>
   </div> 
 </ion-content>

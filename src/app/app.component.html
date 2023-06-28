@@ -4,6 +4,7 @@
   
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
+      
       <ion-content>
         <ion-list id="inbox-list">
          
@@ -14,7 +15,24 @@
             </ion-button>
 
           </ion-buttons>
-          <ion-note>seb.catalan@duocuc.cl</ion-note>
+          <ion-note>seb.catalan@duocu.cl</ion-note>
+
+          
+         
+          <ion-item class="profile-section">
+            <ion-avatar (click)="changeImage()">
+              <img *ngIf="profile?.imageUrl; else placeholder_avatar;" [src]="profile?.imageUrl" [attr.cache-busting]="getCacheBustingValue()" />
+              <ng-template #placeholder_avatar>
+                <div class="fallback">
+                  <p>Selecciona Avatar</p>
+                </div>
+              </ng-template>
+            </ion-avatar>
+          </ion-item>
+
+          
+          
+          
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
@@ -25,7 +43,12 @@
         </ion-list>
 
         <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
+          <ion-item class="ion-margin-top ion-margin-bottom">
+            <ion-label>Fecha de inicio</ion-label>
+            <ion-datetime locale="es-ES"></ion-datetime>
+          </ion-item>
+          
+          <ion-list-header>Etiqueta</ion-list-header>
 
           <ion-item *ngFor="let label of labels" lines="none">
             <ion-icon aria-hidden="true" slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
